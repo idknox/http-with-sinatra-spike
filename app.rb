@@ -6,7 +6,7 @@ class MyApp < Sinatra::Application
 
   def initialize
     super
-    @items = ["good steak", "bad steak", "crab"]
+    @items = ["cheese", "bread", "wine"]
 
   end
 
@@ -29,7 +29,38 @@ class MyApp < Sinatra::Application
 
   post "/items/new" do
     @items.push(params[:new_item])
-    erb :new
+    redirect "/items"
+  end
+
+  get "/items/:id/edit" do
+    pass unless params[:id].to_i <= @items.length
+    erb :edit, :locals => {:index => params[:id]}
+  end
+
+  put "/items/:id/edit" do
+    id = params[:id].to_i
+    @items[id-1] = params[:edit_item]
+    redirect "/items"
+  end
+
+  get "/items/*/edit" do
+    erb :DNE
+  end
+
+  get "/items/:id" do
+    pass unless params[:id].to_i <= @items.length
+    id = params[:id].to_i
+    erb :single, :locals => {:item => @items[id-1], :index => id}
+  end
+
+  delete "/items/:id" do
+    id = params[:id].to_i
+    @items.slice!(id-1)
+    redirect "/items"
+  end
+
+  get "/items/*" do
+    erb :DNE
   end
 
   run! if app_file == $0

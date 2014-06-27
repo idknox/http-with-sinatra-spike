@@ -1,7 +1,15 @@
-<a href="/items/new">New Items</a>
+<a href="/items/new">New Item</a>
 
 <ul>
     <% items.each do |item| %>
     <li><%= item %></li>
     <% end %>
 </ul>
+
+<p>
+  Index:
+  <% items.each_with_index do |item, index| %>
+    <a href="/items/<%= index + 1 %>">
+    <%=  index + 1 %></a>
+  <% end %>
+</p>
