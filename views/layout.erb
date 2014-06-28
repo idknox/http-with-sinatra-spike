@@ -4,12 +4,36 @@
   <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Sniglet' rel='stylesheet' type='text/css'>
-  <link type="text/css" rel="stylesheet" href="stylesheet.css">
+  <link type="text/css" rel="stylesheet" href="/stylesheet.css">
   <title>Ian Knox</title>
 </head>
 <body>
+<div id="background_picture">
+  <div id="top_header">
+    <a href="/">Ian Knox</a>
+  </div>
+  <nav>
+    <div id="nav_container">
+      <ul>
+        <li><a href="http://iandknox.com/blog" class="">Blog</a></li>
+        <li><a href="/items" class="">List App</a></li>
+        <li><a href="/resume" class="">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div id="about_container">
+  <%= yield %>
+</div>
+<footer>
+  <ul>
+    <li><a href="mailto:knoxid@gmail.com" target="_blank"><img src="/images/social-icons-27.png" alt="email icon"></a></li>
+    <li><a href="http://www.twitter.com/idknox" target="_blank"><img src="/images/social-icons-22.png" alt="Twitter logo"></a></li>
+    <li><a href="https://www.linkedin.com/profile/view?id=253022916"><img src="/images/social-icons-24.png" alt="LinkedIn logo"></a></li>
+    <li><a href="http://www.github.com/idknox" target="_blank"><img src="/images/GitHub-Mark-120px-plus.png" alt="GitHub logo"></a></li>
+  </ul>
+</footer>
 
-<%= yield %>
 
 <a href="/items">Items</a>
 <a href="/">Home</a>

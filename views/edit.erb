@@ -1,6 +1,7 @@
 <h1>Edit Item <%= index %>: </h1>
 <form action="/items/<%= index %>/edit" method="post">
+    <input type="hidden" name="_method" value="put">
     <label for="name">Name</label>
-    <input type="hidden" name="edit_item" value="put">
-    <input type= "submit"></input>
+    <input type="text" name="edit_item">
+    <button type= "submit">Submit</button>
 </form>

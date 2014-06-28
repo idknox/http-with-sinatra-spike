@@ -551,3 +551,18 @@ h3 {
     width: 50%;
     float: right;
 }
+
+/*form {*/
+    /*color: #00749d;*/
+
+/*}*/
+
+form button {
+    background-color: #000000;
+    color: #fff;
+    border: 2px solid black;
+}
+
+form button:hover {
+    background-color: #00749d;
+}
