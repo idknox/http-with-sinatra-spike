@@ -6,8 +6,8 @@ class MyApp < Sinatra::Application
 
   def initialize
     super
-    @items = ["cheese", "bread", "wine"]
-
+    @items = File.open('/usr/share/dict/words').read.split(" ")
+    @items.slice!(400..-399)
   end
 
   get "/" do

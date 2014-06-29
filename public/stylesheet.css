@@ -566,3 +566,30 @@ form button {
 form button:hover {
     background-color: #00749d;
 }
+
+.one_fourth {
+    width:45em;
+    height: 120em;
+    font-size: 1.5em;
+    text-decoration: none;
+    list-style-type: none;
+    -moz-column-count: 4;
+    -moz-column-gap: 1em;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 1em;
+    column-count: 4;
+    column-gap: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
+.wrapper {
+    margin: auto;
+    width: 980px;

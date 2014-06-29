@@ -15,8 +15,8 @@
   <nav>
     <div id="nav_container">
       <ul>
-        <li><a href="http://iandknox.com/blog" class="">Blog</a></li>
-        <li><a href="/items" class="">List App</a></li>
+        <li><a href="http://www.iandknox.com/blog" class="">Blog</a></li>
+        <li><a href="/items" class="" >List App</a></li>
         <li><a href="/resume" class="">Resume</a></li>
       </ul>
     </div>
@@ -24,18 +24,20 @@
 </div>
 <div id="about_container">
   <%= yield %>
+  <a href="/items">Items</a>
+  <a href="/">Home</a>
 </div>
 <footer>
-  <ul>
-    <li><a href="mailto:knoxid@gmail.com" target="_blank"><img src="/images/social-icons-27.png" alt="email icon"></a></li>
-    <li><a href="http://www.twitter.com/idknox" target="_blank"><img src="/images/social-icons-22.png" alt="Twitter logo"></a></li>
-    <li><a href="https://www.linkedin.com/profile/view?id=253022916"><img src="/images/social-icons-24.png" alt="LinkedIn logo"></a></li>
-    <li><a href="http://www.github.com/idknox" target="_blank"><img src="/images/GitHub-Mark-120px-plus.png" alt="GitHub logo"></a></li>
-  </ul>
+  <div class="wrapper">
+    <section class="clearfix">
+    <ul>
+      <li><a href="mailto:knoxid@gmail.com" target="_blank"><img src="/images/social-icons-27.png" alt="email icon"></a></li>
+      <li><a href="http://www.twitter.com/idknox" target="_blank"><img src="/images/social-icons-22.png" alt="Twitter logo"></a></li>
+      <li><a href="https://www.linkedin.com/profile/view?id=253022916"><img src="/images/social-icons-24.png" alt="LinkedIn logo"></a></li>
+      <li><a href="http://www.github.com/idknox" target="_blank"><img src="/images/GitHub-Mark-120px-plus.png" alt="GitHub logo"></a></li>
+    </ul>
+    </section>
+   </div>
 </footer>
-
-
-<a href="/items">Items</a>
-<a href="/">Home</a>
 </body>
 </html>
